@@ -57,9 +57,17 @@ Long videos and streams become scored, face-tracked, word-captioned vertical cli
 - **Workspaces, team roles, invites, onboarding, notifications**: Agencies keep each client or creator in its own workspace.
 - **Credits, plans and Stripe**: The operator prices each action.
 
+## How it works
+
+A technical case study of the architecture, one end-to-end flow, the key engineering decisions and how you would build something like this: **[docs/HOW-IT-WORKS.md](docs/HOW-IT-WORKS.md)**.
+
 ## A look at the code
 
-**Explainable clip fraud score**: [`snippets/fraud.ts`](snippets/fraud.ts). Views-for-pay campaigns attract fake views, so each clip gets a 0-100 score built from named signals such as a single jump in views or almost no engagement. Every signal shows its numbers, and a high score only holds the payout for a person to review.
+Real excerpts from the source, shown for illustration:
+
+- **Explainable clip fraud score** ([`snippets/fraud.ts`](snippets/fraud.ts)): Views-for-pay campaigns attract fake views, so each clip gets a 0-100 score built from named signals such as a single jump in views or almost no engagement. Every signal shows its numbers, and a high score only holds the payout for a person to review.
+- **Payout math in integer cents** ([`snippets/payout_math.ts`](snippets/payout_math.ts)): Per-view pay, a per-clip cap, a budget reservation and a capped operator commission are all integer arithmetic. The invariant is that reserved plus paid never exceeds the campaign budget, and a payout row is a ledger entry, not a money transfer.
+- **One post, one submission** ([`snippets/post_url_parser.ts`](snippets/post_url_parser.ts)): A pasted link is reduced to a platform and a stable post id, ignoring tracking parameters and host variants, so the same clip cannot be submitted twice. Refusals are sentences a clipper can act on.
 
 ## Requirements (full version)
 

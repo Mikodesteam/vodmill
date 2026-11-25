@@ -8,6 +8,8 @@
   <b>AI video clipping platform with paid clipping campaigns.</b>
 </p>
 
+<p align="center"><sub>AI clipping tool source code · long videos to Shorts, Reels & TikToks · clipping campaigns · white-label SaaS</sub></p>
+
 <p align="center">
   <a href="https://vodmill-demo.mikodes.com/"><b>▶ Live demo</b></a> ·
   <a href="https://vodmill.mikodes.com/docs/"><b>Docs</b></a> ·
@@ -79,6 +81,20 @@ Real excerpts from the source, shown for illustration:
 - Transcription: one of ElevenLabs API key, a Whisper-compatible API key
 
 Not included: Hosting, VPS and domain; No API keys: Anthropic, ElevenLabs, Whisper-compatible provider, Stripe, Resend, Google/YouTube and Twitch usage is billed to the buyer's…; yt-dlp is not bundled; ffmpeg and whisper.cpp are not bundled; No direct posting to TikTok or Instagram.
+
+## FAQ
+
+**Is this the full source code?**  
+No. This repository is a showcase with screenshots, a technical case study and real code excerpts. The complete Vodmill source code is sold at [store.mikodes.com/p/vodmill](https://store.mikodes.com/p/vodmill/).
+
+**What is Vodmill built with?**  
+Hono, Node.js, React, ffmpeg.
+
+**Can I try it before buying?**  
+Yes, open the [live demo](https://vodmill-demo.mikodes.com/).
+
+**Do I get help with the installation?**  
+Free setup help is included with the store purchase; questions go to [mikodes.com/support](https://mikodes.com/support).
 
 ## Get the full source code
 
